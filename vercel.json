@@ -20,5 +20,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.stratup.app"
+        }
+      ],
+      "destination": "https://stratup.app/:path*",
+      "permanent": true
+    }
   ]
 }

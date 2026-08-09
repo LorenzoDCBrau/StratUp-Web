@@ -1,0 +1,18 @@
+StratUp SEO Production v3
+=========================
+HTML pages: 110
+Pages with canonical: 110
+Pages with Schema JSON-LD: 110
+Pages with v3 favicon refs: 110
+Legacy hash href occurrences: 0
+Pages containing old #/es/home or #/en/home: 0
+
+Changes:
+- URL-driven ES/EN state.
+- Header logo always links to / or /en/.
+- Footer fully localized and language-specific.
+- Mega menus localized.
+- Mobile navigation localized.
+- New cache-busted favicon filenames.
+- www.stratup.app permanently redirects to https://stratup.app via vercel.json.
+- Canonical/Schema preserved page-by-page.
