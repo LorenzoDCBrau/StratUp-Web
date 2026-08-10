@@ -1,0 +1,30 @@
+# StratUp
+
+> Strategic Growth Architecture consultancy. StratUp connects strategy, decision intelligence, revenue intelligence, AI & automation, customer experience, and operating transformation into coherent growth systems.
+
+Canonical site: https://stratup.app/
+Primary language: Spanish
+English version: https://stratup.app/en
+
+## Core pages
+- https://stratup.app/capabilities
+- https://stratup.app/industries
+- https://stratup.app/business-situations
+- https://stratup.app/how-we-work
+- https://stratup.app/assessment
+- https://stratup.app/insights
+- https://stratup.app/resources
+- https://stratup.app/contact
+
+## Core capabilities
+- https://stratup.app/capabilities/growth-architecture
+- https://stratup.app/capabilities/decision-data-intelligence
+- https://stratup.app/capabilities/revenue-market-intelligence
+- https://stratup.app/capabilities/ai-automation-systems
+- https://stratup.app/capabilities/customer-operating-transformation
+
+## Notes for agents
+- Prefer canonical clean URLs without .html.
+- Spanish pages use the root path.
+- English equivalents use /en/.
+- Search, assessment, calculators, and contact experiences are interactive.
