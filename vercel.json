@@ -1,32 +1,131 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
-  "headers": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        }
-      ]
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
     },
     {
-      "source": "/stratup-favicon-v4.svg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        }
-      ]
+      "source": "/en/home",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/es/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/es/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/capability/:slug",
+      "destination": "/capabilities/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/industry/:slug",
+      "destination": "/industries/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/situation/:slug",
+      "destination": "/business-situations/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/outcome/:slug",
+      "destination": "/outcomes/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/insight/:slug",
+      "destination": "/insights/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/tool/:slug",
+      "destination": "/resources/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/solution/:slug",
+      "destination": "/engagements/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/situations",
+      "destination": "/business-situations",
+      "permanent": true
+    },
+    {
+      "source": "/method",
+      "destination": "/how-we-work",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/engagements",
+      "permanent": true
+    },
+    {
+      "source": "/en/capability/:slug",
+      "destination": "/en/capabilities/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/industry/:slug",
+      "destination": "/en/industries/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/situation/:slug",
+      "destination": "/en/business-situations/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/outcome/:slug",
+      "destination": "/en/outcomes/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/insight/:slug",
+      "destination": "/en/insights/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/tool/:slug",
+      "destination": "/en/resources/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/solution/:slug",
+      "destination": "/en/engagements/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/situations",
+      "destination": "/en/business-situations",
+      "permanent": true
+    },
+    {
+      "source": "/en/method",
+      "destination": "/en/how-we-work",
+      "permanent": true
+    },
+    {
+      "source": "/en/solutions",
+      "destination": "/en/engagements",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -465,6 +564,43 @@
     {
       "source": "/search",
       "destination": "/search.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/stratup-favicon-v5-:size.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
     }
   ]
 }

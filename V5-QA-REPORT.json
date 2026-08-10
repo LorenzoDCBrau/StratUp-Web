@@ -1,0 +1,13 @@
+{
+  "html_pages": 110,
+  "canonical_pages": 110,
+  "schema_pages": 110,
+  "favicon_v5_pages": 110,
+  "old_v4_favicon_refs": 0,
+  "legacy_hash_links": 0,
+  "literal_en_home_refs": 0,
+  "literal_es_home_refs": 0,
+  "rewrites": 109,
+  "redirects": 25,
+  "missing_rewrite_destinations": []
+}
