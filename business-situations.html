@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<link rel="icon" href="/stratup-favicon-v5-32.png?v=5" type="image/png" sizes="32x32">
-<link rel="icon" href="/stratup-favicon-v5-48.png?v=5" type="image/png" sizes="48x48">
-<link rel="shortcut icon" href="/favicon.ico?v=5">
-<link rel="apple-touch-icon" href="/stratup-apple-touch-v5.png?v=5">
-<link rel="manifest" href="/site.webmanifest?v=5">
+<link rel="icon" href="/stratup-favicon-v6-32.png?v=6" type="image/png" sizes="32x32">
+<link rel="icon" href="/stratup-favicon-v6-48.png?v=6" type="image/png" sizes="48x48">
+<link rel="shortcut icon" href="/favicon.ico?v=6">
+<link rel="apple-touch-icon" href="/stratup-apple-touch-v6.png?v=6">
+<link rel="manifest" href="/site.webmanifest?v=6">
 <meta name="theme-color" content="#ffffff">
 
 <style>
@@ -93,7 +93,24 @@ function parseRoute(){let p=location.pathname.replace(/^\/+|\/+$/g,'').split('/'
 function setMeta(title,desc){document.title=title+' — StratUp';document.querySelector('meta[name=description]').content=desc}
 function heroVisual(){return `<div class="hero-visual"><div class="visual-grid"></div><div class="visual-core"><img src="${PRISM}" alt=""><b>STRATUP<br>GROWTH SYSTEM</b></div>${DATA.capabilities.map((c,i)=>`<div class="visual-node vn${i+1}"><small>${c.index}</small><b>${c.short}</b></div>`).join('')}</div>`}
 function pageHero(eyebrow,title,copy,extra=''){return `<section class="page-hero"><div class="container"><p class="eyebrow">${eyebrow}</p><h1 class="display">${title}</h1><p class="lead">${copy}</p>${extra}</div></section>`}
-function renderHeaderLinks(){document.documentElement.lang=state.lang;const brand=document.querySelector('.site-header .brand');if(brand){brand.setAttribute('href',state.lang==='en'?'/en/':'/');brand.setAttribute('aria-label',state.lang==='en'?'StratUp Home':'StratUp Inicio')}const langBtn=document.querySelector('.lang-btn');if(langBtn){langBtn.textContent=state.lang==='es'?'EN':'ES';langBtn.setAttribute('aria-label',state.lang==='es'?'Switch to English':'Cambiar a español')}const labels=state.lang==='es'?{cap:'Capacidades',context:'Contexto',method:'Cómo trabajamos',knowledge:'Perspectivas',firm:'Firma',cta:'Evaluar nuestro sistema'}:{cap:'Capabilities',context:'Context',method:'How we work',knowledge:'Insights',firm:'Firm',cta:'Assess your system'};document.querySelector('[data-mega=cap]').textContent=labels.cap;document.querySelector('[data-mega=context]').textContent=labels.context;document.querySelector('[data-mega=knowledge]').textContent=labels.knowledge;const navLinks=document.querySelectorAll('.nav>a');if(navLinks[0])navLinks[0].textContent=labels.method;if(navLinks[1])navLinks[1].textContent=labels.firm;const cta=document.querySelector('.header-actions .btn.primary');if(cta){cta.textContent=labels.cta+' ↗';cta.setAttribute('href',route('assessment'))}}
+function renderHeaderLinks(){
+document.documentElement.lang=state.lang;
+const brand=document.querySelector('.site-header .brand');
+if(brand){brand.setAttribute('href',state.lang==='en'?'/en/':'/');brand.setAttribute('aria-label',state.lang==='en'?'StratUp Home':'StratUp Inicio')}
+const langBtn=document.querySelector('.lang-btn');
+if(langBtn){langBtn.textContent=state.lang==='es'?'EN':'ES';langBtn.setAttribute('aria-label',state.lang==='es'?'Switch to English':'Cambiar a español')}
+const labels=state.lang==='es'
+?{cap:'Capacidades',context:'Contexto',method:'Cómo trabajamos',knowledge:'Perspectivas',firm:'Firma',cta:'Evaluar nuestro sistema'}
+:{cap:'Capabilities',context:'Context',method:'How we work',knowledge:'Insights',firm:'Firm',cta:'Assess your system'};
+document.querySelector('[data-mega=cap]').textContent=labels.cap;
+document.querySelector('[data-mega=context]').textContent=labels.context;
+document.querySelector('[data-mega=knowledge]').textContent=labels.knowledge;
+const navLinks=document.querySelectorAll('.nav>a');
+if(navLinks[0]){navLinks[0].textContent=labels.method;navLinks[0].setAttribute('href',route('method'))}
+if(navLinks[1]){navLinks[1].textContent=labels.firm;navLinks[1].setAttribute('href',route('firm'))}
+const cta=document.querySelector('.header-actions .btn.primary');
+if(cta){cta.textContent=labels.cta+' ↗';cta.setAttribute('href',route('assessment'))}
+}
 function home(){setMeta(state.lang==='es'?'Arquitectura estratégica de crecimiento':'Strategic Growth Architecture',state.lang==='es'?'Convertimos complejidad empresarial en sistemas de crecimiento.':'We turn business complexity into growth systems.');return `<section class="hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">STRATEGIC GROWTH ARCHITECTURE</p><h1 class="display">${state.lang==='es'?'Convertimos complejidad empresarial en sistemas de crecimiento.':'We turn business complexity into systems for growth.'}</h1><p class="lead">${state.lang==='es'?'Conectamos estrategia, revenue, datos, inteligencia artificial y operación para que la dirección pueda decidir mejor, ejecutar con precisión y escalar con control.':'We connect strategy, revenue, data, artificial intelligence, and operations so leadership can decide better, execute precisely, and scale with control.'}</p><div class="actions"><a class="btn primary" href="${route('assessment')}">${state.lang==='es'?'Evaluar nuestro sistema':'Assess your system'} ↗</a><a class="btn ghost" href="${route('method')}">${state.lang==='es'?'Explorar cómo trabajamos':'Explore how we work'} →</a></div></div>${heroVisual()}</div><div class="container hero-trust"><span>${state.lang==='es'?'Comprendemos el negocio antes de diseñar la solución.':'We understand the business before designing the solution.'}</span><span>SCROLL ↓</span></div></section>
 <section class="section"><div class="container"><div class="heading"><div><p class="eyebrow">BUSINESS SIGNALS</p><h2 class="title">${state.lang==='es'?'La señal visible rara vez revela la causa completa.':'The visible signal rarely reveals the full cause.'}</h2></div><p>${state.lang==='es'?'Seleccione el contexto que más se aproxima a la situación actual de la empresa.':'Select the context closest to the current business situation.'}</p></div><div class="signals">${DATA.situations.slice(0,6).map((s,i)=>`<a class="signal" href="${route('situation/'+s.slug)}"><span>0${i+1}</span><div><h3>${t(s.title)}</h3><p>${t(s.summary)}</p></div><span>↗</span></a>`).join('')}</div></div></section>
 <section class="section dark"><div class="container"><div class="heading"><div><p class="eyebrow">CAPABILITY SYSTEMS</p><h2 class="title">${state.lang==='es'?'Cinco capacidades conectadas por una misma arquitectura.':'Five capabilities connected by one architecture.'}</h2></div><p class="muted">${state.lang==='es'?'Seleccione un sistema para comprender la pregunta que responde y el resultado que debe producir.':'Select a system to understand the question it answers and the outcome it should produce.'}</p></div>${systemExplorer()}</div></section>
@@ -152,6 +169,27 @@ document.querySelectorAll('[data-mega]').forEach(b=>{b.onmouseenter=()=>openMega
 function updateWa(){let [,,param]=parseRoute(),msg=state.lang==='es'?'Hola, llegué desde el sitio de StratUp y quisiera compartir el contexto de mi empresa.':'Hello, I came from the StratUp site and would like to share my business context.';document.getElementById('waFab').href='https://wa.me/50762975269?text='+encodeURIComponent(msg)}
 const assistant=document.querySelector('.assistant'),abody=document.querySelector('.assistant-body');document.querySelector('.fab.assist').onclick=()=>{assistant.hidden=!assistant.hidden;if(!assistant.hidden)assistantStep(1)};document.querySelector('.assistant-close').onclick=()=>assistant.hidden=true;function assistantStep(step,cap=''){if(step===1)abody.innerHTML=`<p class="eyebrow">${state.lang==='es'?'PASO 1 DE 3':'STEP 1 OF 3'}</p><h3>${state.lang==='es'?'¿Qué necesita mejorar primero?':'What needs to improve first?'}</h3><div class="assistant-options">${DATA.capabilities.map((c,i)=>`<button data-assist-cap="${i}"><span>${c.short}</span>→</button>`).join('')}<button data-assist-cap="assessment"><span>${state.lang==='es'?'No sabemos por dónde comenzar':'We do not know where to start'}</span>→</button></div>`;if(step===2)abody.innerHTML=`<p class="eyebrow">${state.lang==='es'?'PASO 2 DE 3':'STEP 2 OF 3'}</p><h3>${state.lang==='es'?'¿En qué horizonte necesitan actuar?':'What is the action horizon?'}</h3><div class="assistant-options"><button data-assist-time="now">${state.lang==='es'?'Ahora':'Now'} →</button><button data-assist-time="90">90 days →</button><button data-assist-time="explore">${state.lang==='es'?'Estamos explorando':'We are exploring'} →</button></div>`;if(step===3){let c=cap==='assessment'?null:DATA.capabilities[+cap];abody.innerHTML=`<p class="eyebrow">${state.lang==='es'?'RECOMENDACIÓN INICIAL':'INITIAL RECOMMENDATION'}</p><h3>${c?c.title:'Business Growth Maturity Assessment'}</h3><p>${c?t(c.summary):(state.lang==='es'?'Evalúe primero las seis dimensiones para identificar la brecha prioritaria.':'Assess the six dimensions first to identify the priority gap.')}</p><div class="actions"><a class="btn primary" href="${c?route('capability/'+c.slug):route('assessment')}">${state.lang==='es'?'Continuar':'Continue'} ↗</a><a class="btn" href="${route('contact')}">${state.lang==='es'?'Compartir contexto':'Share context'}</a></div>`}document.querySelectorAll('[data-assist-cap]').forEach(b=>b.onclick=()=>{assistant.dataset.cap=b.dataset.assistCap;assistantStep(2)});document.querySelectorAll('[data-assist-time]').forEach(b=>b.onclick=()=>assistantStep(3,assistant.dataset.cap));}
 if(!localStorage.getItem('stratupConsent'))document.querySelector('.cookie').hidden=false;document.querySelector('.cookie-accept').onclick=()=>{localStorage.setItem('stratupConsent','analytics');document.querySelector('.cookie').hidden=true};document.querySelector('.cookie-necessary').onclick=()=>{localStorage.setItem('stratupConsent','necessary');document.querySelector('.cookie').hidden=true};
+
+document.addEventListener('click',function(e){
+  const a=e.target.closest('a[href]');
+  if(!a)return;
+  const raw=a.getAttribute('href');
+  if(!raw || raw.startsWith('#') || raw.startsWith('mailto:') || raw.startsWith('tel:') || raw.startsWith('javascript:'))return;
+  let u;
+  try{u=new URL(raw,location.origin)}catch(_){return}
+  if(u.origin!==location.origin)return;
+  if(state.lang==='en'){
+    let p=u.pathname;
+    if(p==='/' || (!p.startsWith('/en/') && p!=='/en')){
+      const asset=/\.(png|jpg|jpeg|webp|svg|ico|xml|txt|json|pdf|zip)$/i.test(p);
+      if(!asset){
+        e.preventDefault();
+        location.assign(p==='/'?'/en':'/en'+p+u.search+u.hash);
+      }
+    }
+  }
+},true);
+
 render();
 </script>
 </body></html>
