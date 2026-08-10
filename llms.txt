@@ -1,30 +1,42 @@
 # StratUp
 
-> Strategic Growth Architecture consultancy. StratUp connects strategy, decision intelligence, revenue intelligence, AI & automation, customer experience, and operating transformation into coherent growth systems.
+> Strategic Growth Architecture consultancy connecting strategy, decision intelligence, revenue intelligence, AI and automation, customer experience, and operating transformation into coherent growth systems.
 
-Canonical site: https://stratup.app/
-Primary language: Spanish
-English version: https://stratup.app/en
+- [StratUp — Home](https://stratup.app/)
+- [English Home](https://stratup.app/en)
 
-## Core pages
-- https://stratup.app/capabilities
-- https://stratup.app/industries
-- https://stratup.app/business-situations
-- https://stratup.app/how-we-work
-- https://stratup.app/assessment
-- https://stratup.app/insights
-- https://stratup.app/resources
-- https://stratup.app/contact
+## Core Pages
 
-## Core capabilities
-- https://stratup.app/capabilities/growth-architecture
-- https://stratup.app/capabilities/decision-data-intelligence
-- https://stratup.app/capabilities/revenue-market-intelligence
-- https://stratup.app/capabilities/ai-automation-systems
-- https://stratup.app/capabilities/customer-operating-transformation
+- [Capabilities](https://stratup.app/capabilities)
+- [Industries](https://stratup.app/industries)
+- [Business Situations](https://stratup.app/business-situations)
+- [How We Work](https://stratup.app/how-we-work)
+- [Assessment](https://stratup.app/assessment)
+- [Insights](https://stratup.app/insights)
+- [Resources](https://stratup.app/resources)
+- [Contact](https://stratup.app/contact)
 
-## Notes for agents
-- Prefer canonical clean URLs without .html.
-- Spanish pages use the root path.
-- English equivalents use /en/.
-- Search, assessment, calculators, and contact experiences are interactive.
+## Core Capabilities
+
+- [Growth Architecture](https://stratup.app/capabilities/growth-architecture)
+- [Decision & Data Intelligence](https://stratup.app/capabilities/decision-data-intelligence)
+- [Revenue & Market Intelligence](https://stratup.app/capabilities/revenue-market-intelligence)
+- [AI & Automation Systems](https://stratup.app/capabilities/ai-automation-systems)
+- [Customer & Operating Transformation](https://stratup.app/capabilities/customer-operating-transformation)
+
+## Priority Industries
+
+- [Real Estate](https://stratup.app/industries/real-estate)
+- [Hospitality & Tourism](https://stratup.app/industries/hospitality-tourism)
+- [Financial Services](https://stratup.app/industries/financial-services)
+- [Retail](https://stratup.app/industries/retail)
+- [Professional Services](https://stratup.app/industries/professional-services)
+- [Automotive](https://stratup.app/industries/automotive)
+
+## Notes for Agents
+
+- Prefer canonical clean URLs without `.html`.
+- Spanish content uses the root path.
+- English equivalents use `/en/`.
+- Search, assessment, calculators, contact, and booking experiences are interactive.
+- Use the website's WebMCP tools when available.

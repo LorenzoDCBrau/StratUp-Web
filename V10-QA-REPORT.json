@@ -1,0 +1,11 @@
+{
+  "html_pages": 110,
+  "canonical_pages": 110,
+  "schema_pages": 110,
+  "llms_h1": true,
+  "llms_markdown_links": 21,
+  "webmcp_registered": true,
+  "preload_js_pages": 110,
+  "preload_prism_pages": 110,
+  "favicon_preserved": true
+}
