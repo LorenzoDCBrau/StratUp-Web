@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
     {
@@ -19,19 +18,453 @@
           "value": "SAMEORIGIN"
         }
       ]
+    },
+    {
+      "source": "/stratup-favicon-v4.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.stratup.app"
-        }
-      ],
-      "destination": "https://stratup.app/:path*",
-      "permanent": true
+      "source": "/assessment",
+      "destination": "/assessment.html"
+    },
+    {
+      "source": "/book",
+      "destination": "/book.html"
+    },
+    {
+      "source": "/business-situations/adopt-ai",
+      "destination": "/business-situations/adopt-ai.html"
+    },
+    {
+      "source": "/business-situations/costly-campaigns",
+      "destination": "/business-situations/costly-campaigns.html"
+    },
+    {
+      "source": "/business-situations/crm-without-value",
+      "destination": "/business-situations/crm-without-value.html"
+    },
+    {
+      "source": "/business-situations/data-without-clarity",
+      "destination": "/business-situations/data-without-clarity.html"
+    },
+    {
+      "source": "/business-situations/growth-stalled",
+      "destination": "/business-situations/growth-stalled.html"
+    },
+    {
+      "source": "/business-situations/manual-processes",
+      "destination": "/business-situations/manual-processes.html"
+    },
+    {
+      "source": "/business-situations/marketing-sales-misalignment",
+      "destination": "/business-situations/marketing-sales-misalignment.html"
+    },
+    {
+      "source": "/business-situations/need-to-scale",
+      "destination": "/business-situations/need-to-scale.html"
+    },
+    {
+      "source": "/business-situations/revenue-leakage",
+      "destination": "/business-situations/revenue-leakage.html"
+    },
+    {
+      "source": "/business-situations/transformation-blocked",
+      "destination": "/business-situations/transformation-blocked.html"
+    },
+    {
+      "source": "/business-situations",
+      "destination": "/business-situations.html"
+    },
+    {
+      "source": "/capabilities/ai-automation-systems",
+      "destination": "/capabilities/ai-automation-systems.html"
+    },
+    {
+      "source": "/capabilities/customer-operating-transformation",
+      "destination": "/capabilities/customer-operating-transformation.html"
+    },
+    {
+      "source": "/capabilities/decision-data-intelligence",
+      "destination": "/capabilities/decision-data-intelligence.html"
+    },
+    {
+      "source": "/capabilities/growth-architecture",
+      "destination": "/capabilities/growth-architecture.html"
+    },
+    {
+      "source": "/capabilities/revenue-market-intelligence",
+      "destination": "/capabilities/revenue-market-intelligence.html"
+    },
+    {
+      "source": "/capabilities",
+      "destination": "/capabilities.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/en/assessment",
+      "destination": "/en/assessment.html"
+    },
+    {
+      "source": "/en/book",
+      "destination": "/en/book.html"
+    },
+    {
+      "source": "/en/business-situations/adopt-ai",
+      "destination": "/en/business-situations/adopt-ai.html"
+    },
+    {
+      "source": "/en/business-situations/costly-campaigns",
+      "destination": "/en/business-situations/costly-campaigns.html"
+    },
+    {
+      "source": "/en/business-situations/crm-without-value",
+      "destination": "/en/business-situations/crm-without-value.html"
+    },
+    {
+      "source": "/en/business-situations/data-without-clarity",
+      "destination": "/en/business-situations/data-without-clarity.html"
+    },
+    {
+      "source": "/en/business-situations/growth-stalled",
+      "destination": "/en/business-situations/growth-stalled.html"
+    },
+    {
+      "source": "/en/business-situations/manual-processes",
+      "destination": "/en/business-situations/manual-processes.html"
+    },
+    {
+      "source": "/en/business-situations/marketing-sales-misalignment",
+      "destination": "/en/business-situations/marketing-sales-misalignment.html"
+    },
+    {
+      "source": "/en/business-situations/need-to-scale",
+      "destination": "/en/business-situations/need-to-scale.html"
+    },
+    {
+      "source": "/en/business-situations/revenue-leakage",
+      "destination": "/en/business-situations/revenue-leakage.html"
+    },
+    {
+      "source": "/en/business-situations/transformation-blocked",
+      "destination": "/en/business-situations/transformation-blocked.html"
+    },
+    {
+      "source": "/en/business-situations",
+      "destination": "/en/business-situations.html"
+    },
+    {
+      "source": "/en/capabilities/ai-automation-systems",
+      "destination": "/en/capabilities/ai-automation-systems.html"
+    },
+    {
+      "source": "/en/capabilities/customer-operating-transformation",
+      "destination": "/en/capabilities/customer-operating-transformation.html"
+    },
+    {
+      "source": "/en/capabilities/decision-data-intelligence",
+      "destination": "/en/capabilities/decision-data-intelligence.html"
+    },
+    {
+      "source": "/en/capabilities/growth-architecture",
+      "destination": "/en/capabilities/growth-architecture.html"
+    },
+    {
+      "source": "/en/capabilities/revenue-market-intelligence",
+      "destination": "/en/capabilities/revenue-market-intelligence.html"
+    },
+    {
+      "source": "/en/capabilities",
+      "destination": "/en/capabilities.html"
+    },
+    {
+      "source": "/en/contact",
+      "destination": "/en/contact.html"
+    },
+    {
+      "source": "/en/engagements/ai-for-business",
+      "destination": "/en/engagements/ai-for-business.html"
+    },
+    {
+      "source": "/en/engagements/business-growth-audit",
+      "destination": "/en/engagements/business-growth-audit.html"
+    },
+    {
+      "source": "/en/engagements/executive-workshops",
+      "destination": "/en/engagements/executive-workshops.html"
+    },
+    {
+      "source": "/en/engagements/hospitality-growth",
+      "destination": "/en/engagements/hospitality-growth.html"
+    },
+    {
+      "source": "/en/engagements/hubspot-consulting",
+      "destination": "/en/engagements/hubspot-consulting.html"
+    },
+    {
+      "source": "/en/engagements/marketing-intelligence",
+      "destination": "/en/engagements/marketing-intelligence.html"
+    },
+    {
+      "source": "/en/engagements/real-estate-growth",
+      "destination": "/en/engagements/real-estate-growth.html"
+    },
+    {
+      "source": "/en/engagements",
+      "destination": "/en/engagements.html"
+    },
+    {
+      "source": "/en/firm",
+      "destination": "/en/firm.html"
+    },
+    {
+      "source": "/en/how-we-work",
+      "destination": "/en/how-we-work.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/industries/automotive",
+      "destination": "/en/industries/automotive.html"
+    },
+    {
+      "source": "/en/industries/financial-services",
+      "destination": "/en/industries/financial-services.html"
+    },
+    {
+      "source": "/en/industries/hospitality-tourism",
+      "destination": "/en/industries/hospitality-tourism.html"
+    },
+    {
+      "source": "/en/industries/professional-services",
+      "destination": "/en/industries/professional-services.html"
+    },
+    {
+      "source": "/en/industries/real-estate",
+      "destination": "/en/industries/real-estate.html"
+    },
+    {
+      "source": "/en/industries/retail",
+      "destination": "/en/industries/retail.html"
+    },
+    {
+      "source": "/en/industries",
+      "destination": "/en/industries.html"
+    },
+    {
+      "source": "/en/insights/ai-begins-with-constraint",
+      "destination": "/en/insights/ai-begins-with-constraint.html"
+    },
+    {
+      "source": "/en/insights/dashboards-decisions",
+      "destination": "/en/insights/dashboards-decisions.html"
+    },
+    {
+      "source": "/en/insights/operating-model-before-tools",
+      "destination": "/en/insights/operating-model-before-tools.html"
+    },
+    {
+      "source": "/en/insights/revenue-between-teams",
+      "destination": "/en/insights/revenue-between-teams.html"
+    },
+    {
+      "source": "/en/insights",
+      "destination": "/en/insights.html"
+    },
+    {
+      "source": "/en/outcomes/from-leads-to-revenue",
+      "destination": "/en/outcomes/from-leads-to-revenue.html"
+    },
+    {
+      "source": "/en/outcomes/from-manual-to-scalable",
+      "destination": "/en/outcomes/from-manual-to-scalable.html"
+    },
+    {
+      "source": "/en/outcomes/from-reporting-to-decisions",
+      "destination": "/en/outcomes/from-reporting-to-decisions.html"
+    },
+    {
+      "source": "/en/outcomes",
+      "destination": "/en/outcomes.html"
+    },
+    {
+      "source": "/en/privacy",
+      "destination": "/en/privacy.html"
+    },
+    {
+      "source": "/en/resources/ai-readiness-check",
+      "destination": "/en/resources/ai-readiness-check.html"
+    },
+    {
+      "source": "/en/resources/automation-priority-matrix",
+      "destination": "/en/resources/automation-priority-matrix.html"
+    },
+    {
+      "source": "/en/resources/crm-value-diagnostic",
+      "destination": "/en/resources/crm-value-diagnostic.html"
+    },
+    {
+      "source": "/en/resources/decision-architecture-canvas",
+      "destination": "/en/resources/decision-architecture-canvas.html"
+    },
+    {
+      "source": "/en/resources/revenue-leakage-calculator",
+      "destination": "/en/resources/revenue-leakage-calculator.html"
+    },
+    {
+      "source": "/en/resources",
+      "destination": "/en/resources.html"
+    },
+    {
+      "source": "/en/search",
+      "destination": "/en/search.html"
+    },
+    {
+      "source": "/engagements/ai-for-business",
+      "destination": "/engagements/ai-for-business.html"
+    },
+    {
+      "source": "/engagements/business-growth-audit",
+      "destination": "/engagements/business-growth-audit.html"
+    },
+    {
+      "source": "/engagements/executive-workshops",
+      "destination": "/engagements/executive-workshops.html"
+    },
+    {
+      "source": "/engagements/hospitality-growth",
+      "destination": "/engagements/hospitality-growth.html"
+    },
+    {
+      "source": "/engagements/hubspot-consulting",
+      "destination": "/engagements/hubspot-consulting.html"
+    },
+    {
+      "source": "/engagements/marketing-intelligence",
+      "destination": "/engagements/marketing-intelligence.html"
+    },
+    {
+      "source": "/engagements/real-estate-growth",
+      "destination": "/engagements/real-estate-growth.html"
+    },
+    {
+      "source": "/engagements",
+      "destination": "/engagements.html"
+    },
+    {
+      "source": "/firm",
+      "destination": "/firm.html"
+    },
+    {
+      "source": "/how-we-work",
+      "destination": "/how-we-work.html"
+    },
+    {
+      "source": "/industries/automotive",
+      "destination": "/industries/automotive.html"
+    },
+    {
+      "source": "/industries/financial-services",
+      "destination": "/industries/financial-services.html"
+    },
+    {
+      "source": "/industries/hospitality-tourism",
+      "destination": "/industries/hospitality-tourism.html"
+    },
+    {
+      "source": "/industries/professional-services",
+      "destination": "/industries/professional-services.html"
+    },
+    {
+      "source": "/industries/real-estate",
+      "destination": "/industries/real-estate.html"
+    },
+    {
+      "source": "/industries/retail",
+      "destination": "/industries/retail.html"
+    },
+    {
+      "source": "/industries",
+      "destination": "/industries.html"
+    },
+    {
+      "source": "/insights/ai-begins-with-constraint",
+      "destination": "/insights/ai-begins-with-constraint.html"
+    },
+    {
+      "source": "/insights/dashboards-decisions",
+      "destination": "/insights/dashboards-decisions.html"
+    },
+    {
+      "source": "/insights/operating-model-before-tools",
+      "destination": "/insights/operating-model-before-tools.html"
+    },
+    {
+      "source": "/insights/revenue-between-teams",
+      "destination": "/insights/revenue-between-teams.html"
+    },
+    {
+      "source": "/insights",
+      "destination": "/insights.html"
+    },
+    {
+      "source": "/outcomes/from-leads-to-revenue",
+      "destination": "/outcomes/from-leads-to-revenue.html"
+    },
+    {
+      "source": "/outcomes/from-manual-to-scalable",
+      "destination": "/outcomes/from-manual-to-scalable.html"
+    },
+    {
+      "source": "/outcomes/from-reporting-to-decisions",
+      "destination": "/outcomes/from-reporting-to-decisions.html"
+    },
+    {
+      "source": "/outcomes",
+      "destination": "/outcomes.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/resources/ai-readiness-check",
+      "destination": "/resources/ai-readiness-check.html"
+    },
+    {
+      "source": "/resources/automation-priority-matrix",
+      "destination": "/resources/automation-priority-matrix.html"
+    },
+    {
+      "source": "/resources/crm-value-diagnostic",
+      "destination": "/resources/crm-value-diagnostic.html"
+    },
+    {
+      "source": "/resources/decision-architecture-canvas",
+      "destination": "/resources/decision-architecture-canvas.html"
+    },
+    {
+      "source": "/resources/revenue-leakage-calculator",
+      "destination": "/resources/revenue-leakage-calculator.html"
+    },
+    {
+      "source": "/resources",
+      "destination": "/resources.html"
+    },
+    {
+      "source": "/search",
+      "destination": "/search.html"
     }
   ]
 }

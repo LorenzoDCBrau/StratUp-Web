@@ -1,0 +1,24 @@
+{
+  "html_pages": 110,
+  "canonical_pages": 110,
+  "schema_pages": 110,
+  "favicon_v4_pages": 110,
+  "legacy_hash_href_occurrences": 0,
+  "old_v3_favicon_refs": 0,
+  "rewrite_rules": 109,
+  "missing_rewrite_destinations": [],
+  "duplicate_rewrite_sources": [],
+  "key_route_map": {
+    "/capabilities": "/capabilities.html",
+    "/capabilities/growth-architecture": "/capabilities/growth-architecture.html",
+    "/industries": "/industries.html",
+    "/industries/real-estate": "/industries/real-estate.html",
+    "/assessment": "/assessment.html",
+    "/contact": "/contact.html",
+    "/en": "/en/index.html",
+    "/en/capabilities": "/en/capabilities.html",
+    "/en/industries/real-estate": "/en/industries/real-estate.html"
+  },
+  "host_redirect_in_vercel_json": false,
+  "cleanUrls_enabled": false
+}
