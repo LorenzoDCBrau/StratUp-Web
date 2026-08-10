@@ -100,51 +100,60 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 
 
-/* V11 mobile viewport/footer hardening */
+/* V12 final mobile footer hardening */
 html,body{
   min-height:100%;
   overscroll-behavior-y:none;
 }
-body{
-  min-height:100dvh;
-}
-#main{
-  min-height:0;
-}
-.site-footer{
-  position:relative;
-  overflow:hidden;
-}
-.floating{
-  bottom:max(20px, env(safe-area-inset-bottom));
-}
+
 @media(max-width:720px){
-  body{
-    min-height:100dvh;
-    overscroll-behavior-y:none;
+  html,body{
+    min-height:100%;
   }
+
+  #main{
+    min-height:100svh;
+  }
+
   .site-footer{
-    padding-bottom:calc(105px + env(safe-area-inset-bottom));
+    position:relative;
+    overflow:hidden;
+    padding-bottom:calc(25px + env(safe-area-inset-bottom));
   }
+
   .footer-bottom{
     margin-bottom:0;
     padding-bottom:0;
   }
+
   .floating{
+    position:fixed;
     right:16px;
-    bottom:max(16px, env(safe-area-inset-bottom));
+    bottom:max(12px, env(safe-area-inset-bottom));
     z-index:1500;
   }
-  .fab{
-    height:48px;
-  }
-  .fab.wa{
-    width:48px;
-  }
-  .fab.assist{
-    padding:0 16px;
-  }
+
   .assistant{
     bottom:calc(76px + env(safe-area-inset-bottom));
   }
 }
+
+/* iPhone/iPad WebKit-specific stabilization */
+@supports (-webkit-touch-callout:none){
+  @media(max-width:720px){
+    html{
+      min-height:-webkit-fill-available;
+      background:#101114;
+    }
+
+    body{
+      min-height:-webkit-fill-available;
+      overscroll-behavior-y:none;
+    }
+
+    .site-footer{
+      padding-bottom:calc(20px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
