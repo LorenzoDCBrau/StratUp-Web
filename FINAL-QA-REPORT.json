@@ -1,0 +1,13 @@
+{
+  "html_pages": 110,
+  "canonical_pages": 110,
+  "schema_pages": 110,
+  "favicon_svg_refs": 110,
+  "favicon_ico_refs": 110,
+  "apple_touch_refs": 110,
+  "remaining_icon_assets": [
+    "apple-touch-icon.png",
+    "favicon.ico",
+    "favicon.svg"
+  ]
+}
