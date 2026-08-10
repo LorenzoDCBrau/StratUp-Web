@@ -1,0 +1,13 @@
+{
+  "html_pages": 110,
+  "canonical_pages": 110,
+  "schema_pages": 110,
+  "google_font_requests_in_html": 0,
+  "system_font_css": true,
+  "short_hero_es": true,
+  "webmcp_imperative_tool": true,
+  "webmcp_declarative_tools": 4,
+  "llms_txt": true,
+  "favicon_svg": true,
+  "routing_preserved": true
+}
